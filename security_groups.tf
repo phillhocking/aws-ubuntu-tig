@@ -1,5 +1,5 @@
-resource "aws_security_group" "tig_dev" {
-  name        = "tig-dev"
+resource "aws_security_group" "tig_prod" {
+  name        = "tig-prod"
   description = "Allow SSH inbound, all HTTP inbound on port 3000, and all outbound traffic"
 
   ingress {

@@ -4,7 +4,7 @@ terraform {
     organization = "excelsior"
 
     workspaces {
-      name = "aws-ubuntu-tig-dev"
+      name = "aws-ubuntu-tig-prod"
     }
   }
 }

@@ -33,5 +33,5 @@ resource "aws_instance" "tig_dev" {
   user_data              = data.template_file.deploy.rendered
   tags = {
     Name = "tig-prod"
-  }  
+  }
 }

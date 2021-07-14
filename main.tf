@@ -32,6 +32,6 @@ resource "aws_instance" "tig_dev" {
   vpc_security_group_ids = [aws_security_group.tig_dev.id]
   user_data              = data.template_file.deploy.rendered
   tags = {
-    Name = "tig-prod"
+    Name = "tig-dev"
   }
 }

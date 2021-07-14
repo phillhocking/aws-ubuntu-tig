@@ -1,5 +1,5 @@
 # aws-ubuntu-tig
-![dev](https://github.com/phillhocking/aws-ubuntu-tig/actions/workflows/tflint-dev.yml/badge.svg?branch=dev) ![main](https://github.com/phillhocking/aws-ubuntu-tig/actions/workflows/tflint-main.yml/badge.svg
+![dev](https://github.com/phillhocking/aws-ubuntu-tig/actions/workflows/tflint-dev.yml/badge.svg?branch=dev) ![main](https://github.com/phillhocking/aws-ubuntu-tig/actions/workflows/tflint-main.yml/badge.svg)
 
 This project instantiates the "TIG" stack - Telegraf/Influxdb/Grafana on Ubuntu 20.04 AWS EC2 Instance
 

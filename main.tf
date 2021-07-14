@@ -9,7 +9,7 @@ data "aws_ami" "ubuntu" {
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20201211.1"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20210621"]
   }
 
   filter {
@@ -25,13 +25,13 @@ data "template_file" "deploy" {
 
 }
 
-resource "aws_instance" "netbox_prod" {
+resource "aws_instance" "tig_dev" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = "t2.micro"
   key_name               = var.key_name
-  vpc_security_group_ids = [aws_security_group.netbox_prod.id]
+  vpc_security_group_ids = [aws_security_group.tig_dev.id]
   user_data              = data.template_file.deploy.rendered
   tags = {
-    Name = "netbox-prod"
+    Name = "tig-prod"
   }  
 }

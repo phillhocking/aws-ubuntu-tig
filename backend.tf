@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "excelsior"
+    organization = "phillhocking"
 
     workspaces {
       name = "aws-ubuntu-tig-prod"

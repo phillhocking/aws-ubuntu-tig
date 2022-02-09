@@ -1,5 +1,5 @@
-resource "aws_security_group" "tig_dev" {
-  name        = "tig-dev"
+resource "aws_security_group" "tig_prod" {
+  name        = "tig-prod"
   description = "Allow SSH inbound, all HTTP inbound on port 3000, and all outbound traffic"
 
   ingress {
@@ -8,9 +8,6 @@ resource "aws_security_group" "tig_dev" {
     protocol    = "tcp"
     cidr_blocks = [var.management_cidr_block]
   }
-
-  # These hardcoded values come from the Terraform Cloud API described at https://www.terraform.io/docs/cloud/api/ip-ranges.html so the provisioner blocks can run
-  # These may be subject to change
 
   ingress {
     from_port   = 3000
